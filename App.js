@@ -27,6 +27,7 @@ import {
 
 import Icons from 'react-native-vector-icons/EvilIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import StackNavigator from './Navigation/StackNavigator';
 
 
 function Section({children, title}) {
@@ -63,42 +64,44 @@ function App() {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            <Icons
-              name="heart"
-              size={30}
-              color="red"
-            />
-            <FontAwesome name="tint" size={30} color="blue" />
+    // <SafeAreaView style={backgroundStyle}>
+    //   <StatusBar
+    //     barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+    //     backgroundColor={backgroundStyle.backgroundColor}
+    //   />
+    //   <ScrollView
+    //     contentInsetAdjustmentBehavior="automatic"
+    //     style={backgroundStyle}>
+    //     <Header />
+    //     <View
+    //       style={{
+    //         backgroundColor: isDarkMode ? Colors.black : Colors.white,
+    //       }}>
+    //       <Section title="Step One">
+    //         <Icons
+    //           name="heart"
+    //           size={30}
+    //           color="red"
+    //         />
+    //         <FontAwesome name="tint" size={30} color="blue" />
 
-            fix
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    //         fix
+    //       </Section>
+    //       <Section title="See Your Changes">
+    //         <ReloadInstructions />
+    //       </Section>
+    //       <Section title="Debug">
+    //         <DebugInstructions />
+    //       </Section>
+    //       <Section title="Learn More">
+    //         Read the docs to discover what to do next:
+    //       </Section>
+    //       <LearnMoreLinks />
+    //     </View>
+    //   </ScrollView>
+    // </SafeAreaView>
+
+    <StackNavigator />
   );
 }
 
