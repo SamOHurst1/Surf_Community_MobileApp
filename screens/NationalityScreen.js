@@ -7,7 +7,6 @@ import { useNavigation } from '@react-navigation/native';
 import { Picker } from "@react-native-picker/picker";
 import DropDownPicker from 'react-native-dropdown-picker';
 
-
 const NationalityScreen = () => {
   const navigation = useNavigation();
   const [open, setOpen] = useState(false);
@@ -17,26 +16,6 @@ const NationalityScreen = () => {
   const handleNext = () => {
     navigation.navigate("Nationality");
   }
-
-  const nationalities = [
-    "Afghan", "Albanian", "Algerian", "American", "Andorran", "Angolan", "Argentine", "Armenian", "Australian", "Austrian", 
-    "Azerbaijani", "Bahamian", "Bahraini", "Bangladeshi", "Barbadian", "Belarusian", "Belgian", "Belizean", "Beninese", "Bhutanese",
-    "Bolivian", "Bosnian", "Botswanan", "Brazilian", "British", "Bruneian", "Bulgarian", "Burkinabé", "Burmese", "Burundian", 
-    "Cambodian", "Cameroonian", "Canadian", "Cape Verdean", "Central African", "Chadian", "Chilean", "Chinese", "Colombian", 
-    "Comoran", "Congolese", "Costa Rican", "Croatian", "Cuban", "Cypriot", "Czech", "Danish", "Djiboutian", "Dominican", "Dutch", 
-    "Ecuadorian", "Egyptian", "Emirati", "Equatorial Guinean", "Eritrean", "Estonian", "Ethiopian", "Fijian", "Finnish", "French", 
-    "Gabonese", "Gambian", "Georgian", "German", "Ghanaian", "Greek", "Grenadian", "Guatemalan", "Guinean", "Guyanese", "Haitian", 
-    "Honduran", "Hungarian", "Icelander", "Indian", "Indonesian", "Iranian", "Iraqi", "Irish", "Israeli", "Italian", "Ivorian", 
-    "Jamaican", "Japanese", "Jordanian", "Kazakh", "Kenyan", "Kuwaiti", "Lao", "Latvian", "Lebanese", "Liberian", "Libyan", 
-    "Lithuanian", "Luxembourgish", "Macedonian", "Malagasy", "Malawian", "Malaysian", "Maldivian", "Malian", "Maltese", "Mauritanian", 
-    "Mauritian", "Mexican", "Moldovan", "Monacan", "Mongolian", "Montenegrin", "Moroccan", "Mozambican", "Namibian", "Nepalese", 
-    "New Zealander", "Nicaraguan", "Nigerian", "North Korean", "Norwegian", "Omani", "Pakistani", "Palestinian", "Panamanian", 
-    "Paraguayan", "Peruvian", "Filipino", "Polish", "Portuguese", "Qatari", "Romanian", "Russian", "Rwandan", "Salvadoran", "Samoan", 
-    "Saudi", "Scottish", "Senegalese", "Serbian", "Seychellois", "Singaporean", "Slovak", "Slovenian", "Solomon Islander", "Somali", 
-    "South African", "South Korean", "Spanish", "Sri Lankan", "Sudanese", "Surinamese", "Swazi", "Swedish", "Swiss", "Syrian", 
-    "Tajik", "Tanzanian", "Thai", "Togolese", "Tongan", "Trinidadian", "Tunisian", "Turkish", "Turkmen", "Ugandan", "Ukrainian", 
-    "Uruguayan", "Uzbek", "Venezuelan", "Vietnamese", "Welsh", "Yemeni", "Zambian", "Zimbabwean"
-  ];
 
   const [items, setItems] = useState([
     { label: "Albanian", value: "Albanian" },
@@ -108,8 +87,6 @@ const NationalityScreen = () => {
          Where are you from?
         </Text>
         
-        
-
         <View style={{ marginTop: 20, zIndex: 1000 }}>
           <DropDownPicker
             open={open}
